@@ -1,2 +1,2 @@
-const shader = require('raw-loader!../../glslify-loader!./shader-simple.glsl')
+const shader = require('../../glslify-loader!./shader-simple.glsl?raw')
 module.exports = shader

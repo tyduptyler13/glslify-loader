@@ -4,7 +4,7 @@ const resolve = require('resolve')
 const deps = require('glslify-deps')
 const bundle = require('glslify-bundle')
 
-module.exports = function glslifyLoader (content) {
+module.exports = function glslifyLoader(content) {
   this.cacheable && this.cacheable()
 
   const depper = deps()
@@ -14,7 +14,7 @@ module.exports = function glslifyLoader (content) {
   const options = Object.assign({
     basedir: path.dirname(this.resourcePath),
     transform: []
-  }, loaderUtils.getOptions(this))
+  }, this.getOptions())
 
   // Handle transforms from options
   const transforms = Array.isArray(options.transform) ? options.transform : []

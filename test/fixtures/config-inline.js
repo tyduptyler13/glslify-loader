@@ -1,4 +1,12 @@
 module.exports = {
   target: 'node',
-  mode: 'production'
+  mode: 'production',
+  module: {
+    rules: [
+      {
+        resourceQuery: /raw/,
+        type: 'asset/source'
+      }
+    ]
+  }
 }

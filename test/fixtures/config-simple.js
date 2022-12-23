@@ -8,9 +8,9 @@ module.exports = {
       test: /\.glsl$/,
       exclude: [/node_modules/],
       use: [
-       'raw-loader',
        path.resolve(__dirname, '../../glslify-loader.js')
-      ]
+      ],
+      type: 'asset/source'
     }]
   }
 }

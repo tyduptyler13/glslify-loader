@@ -1,24 +1,29 @@
 {
-  "name": "glslify-loader",
+  "name": "@tyduptyler13/glslify-loader",
   "version": "2.0.0",
   "description": "glslify loader module for webpack",
   "main": "glslify-loader.js",
   "license": "MIT",
   "scripts": {
-    "test": "npm run tape --silent",
-    "tape": "tape test/index.js | tap-spec",
-    "example": "webpack-serve ./example/webpack.config.js"
+    "test": "jest",
+    "example": "webpack serve ./example/webpack.config.js"
   },
-  "author": {
-    "name": "Hugh Kennedy",
-    "email": "hughskennedy@gmail.com",
-    "url": "http://hughsk.io/"
-  },
+  "contributors": [
+    {
+      "name": "Hugh Kennedy",
+      "email": "hughskennedy@gmail.com",
+      "url": "http://hughsk.io/"
+    },
+    "Tyler Scott <tyduptyler13@gmail.com>",
+    "Dave Poulter <dapoulter@gmail.com>",
+    "Ricky Reusser <rsreusser@gmail.com>",
+    "pqml <hugo.piquemal@gmail.com>"
+  ],
   "files": [],
   "dependencies": {
     "glslify-bundle": "^5.0.0",
     "glslify-deps": "^1.3.0",
-    "loader-utils": "^1.1.0",
+    "loader-utils": "^3.2.1",
     "resolve": "^1.3.3"
   },
   "devDependencies": {
@@ -26,25 +31,23 @@
     "glsl-noise": "^0.0.0",
     "glslify-fancy-imports": "^1.0.1",
     "glslify-hex": "^2.1.1",
-    "memory-fs": "^0.4.1",
-    "raw-loader": "^0.5.1",
+    "jest": "^29.3.1",
+    "memfs": "^3.4.12",
     "regl": "^1.3.6",
     "require-from-string": "^2.0.1",
-    "tap-spec": "^5.0.0",
-    "tape": "^4.9.0",
-    "webpack": "^4.1.0",
-    "webpack-serve": "^1.0.4"
+    "webpack": "^5.75.0",
+    "webpack-dev-server": "^4.11.1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/stackgl/glslify-loader.git"
+    "url": "git://github.com/tyduptyler13/glslify-loader.git"
   },
   "keywords": [
     "ecosystem:stackgl"
   ],
-  "homepage": "https://github.com/stackgl/glslify-loader",
+  "homepage": "https://github.com/tyduptyler13/glslify-loader",
   "bugs": {
-    "url": "https://github.com/stackgl/glslify-loader/issues"
+    "url": "https://github.com/tyduptyler13/glslify-loader/issues"
   },
   "engines": {
     "node": ">=6"

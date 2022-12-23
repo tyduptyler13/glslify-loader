@@ -7,9 +7,9 @@
 npm install glslify-loader
 ```
 
-Generally, you'll want to use this alongside webpack's [raw-loader](https://github.com/webpack-contrib/raw-loader) module:
+Generally, you'll want to use this alongside webpack's `'asset/source'` type:
 ```sh
-npm install raw-loader
+type: 'asset/source'
 ```
 
 ## Usage
@@ -25,9 +25,9 @@ module.exports = {
       test: /\.(glsl|vs|fs|vert|frag)$/,
       exclude: /node_modules/,
       use: [
-        'raw-loader',
         'glslify-loader'
-      ]
+      ],
+      type: 'asset/source'
     }
   ]
 }
@@ -35,13 +35,7 @@ module.exports = {
 
 ##### Inline
 
-```js
-// Using require
-const source = require('raw-loader!glslify-loader!./my-shader.glsl')
-
-// Using ES6 import statement
-import source from 'raw-loader!glslify-loader!./my-shader.glsl'
-```
+See the official webpack documentation: https://webpack.js.org/guides/asset-modules/#replacing-inline-loader-syntax
 
 ##### Speficy source transforms
 See [Glslify Source Transforms](https://github.com/glslify/glslify#source-transforms) for details.
@@ -53,16 +47,16 @@ module.exports = {
       test: /\.(glsl|frag|vert)$/,
       exclude: /node_modules/,
       use: [
-        'raw-loader',
         {
-          loader: 'glslify-loader'
+          loader: 'glslify-loader',
           options: {
             transform: [
               ['glslify-hex', { 'option-1': true, 'option-2': 42 }]
             ]
           }
         }
-      ]
+      ],
+      type: 'asset/source'
     }
   ]
 }

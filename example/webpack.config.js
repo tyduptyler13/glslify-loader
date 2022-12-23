@@ -15,13 +15,9 @@ module.exports = {
       test: /\.(glsl|frag|vert)$/,
       exclude: [/node_modules/],
       use: [
-        'raw-loader',
         path.resolve(__dirname, '..', 'glslify-loader.js')
-      ]
+      ],
+      type: 'asset/source'
     }]
-  },
-  serve: {
-    content: __dirname,
-    dev: { stats: 'minimal' }
   }
 }
