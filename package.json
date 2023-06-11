@@ -1,6 +1,6 @@
 {
   "name": "@tyduptyler13/glslify-loader",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "glslify loader module for webpack",
   "main": "glslify-loader.js",
   "license": "MIT",
