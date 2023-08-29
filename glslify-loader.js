@@ -1,5 +1,4 @@
 const path = require('path')
-const loaderUtils = require('loader-utils')
 const resolve = require('resolve')
 const deps = require('glslify-deps')
 const bundle = require('glslify-bundle')
